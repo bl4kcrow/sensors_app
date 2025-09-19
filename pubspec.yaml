@@ -14,6 +14,7 @@ dependencies:
   go_router: ^16.2.1
   google_fonts: ^6.3.1
   permission_handler: ^12.0.1
+  quick_actions: ^1.1.0
   sensors_plus: ^6.1.2
 
 dev_dependencies:
