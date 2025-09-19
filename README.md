@@ -19,3 +19,9 @@ Flutter project about how to use a device sensors.
     <img src="https://github.com/user-attachments/assets/c45de239-866f-46f5-b953-a665b6777a86" width="412px"/>
   </a>
 </div>
+
+<div align="center">
+  <a href="Screenshot_20250918-211849">
+    <img src="https://github.com/user-attachments/assets/7e348998-1aaa-4d39-be48-96a10f48f529" width="412px"/>
+  </a>
+</div>
