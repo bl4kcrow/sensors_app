@@ -31,6 +31,10 @@ final router = GoRouter(
           path: 'magnetometer',
           builder: (context, state) => const MagnetometerScreen(),
         ),
+        GoRoute(
+          path: 'db-pokemons',
+          builder: (context, state) => const DbPokemonsScreen(),
+        ),
       ],
     ),
   ],

@@ -4,16 +4,23 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'package:sensors_app/config/config.dart';
 import 'package:sensors_app/presentation/providers/providers.dart';
+import 'package:workmanager/workmanager.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
   QuickActionsPlugin.registerActions();
 
-  SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-  ]);
-  
+  Workmanager().initialize(callbackDispatcher);
+  // Workmanager().registerOneOffTask(
+  //   "com.bl4kcrow.sensors_app.simpleTask",
+  //   "com.bl4kcrow.sensors_app.simpleTask",
+  //   inputData: {"data": "simpleTask"},
+  //   constraints: Constraints(networkType: NetworkType.connected),
+  // );
+
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+
   runApp(ProviderScope(child: const MainApp()));
 }
 
@@ -35,7 +42,7 @@ class MainAppState extends ConsumerState<MainApp> with WidgetsBindingObserver {
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     ref.read(appStateProvider.notifier).setAppState(state);
-    
+
     if (state == AppLifecycleState.resumed) {
       ref.read(permissionsProvider.notifier).checkPermissions();
     }
