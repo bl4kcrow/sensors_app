@@ -1,0 +1,1 @@
+export 'isar_local_db_datasource.dart';
