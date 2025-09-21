@@ -1,6 +1,9 @@
 # sensors_app
 
-Flutter project about how to use a device sensors.
+Flutter project about
+ - How to use a device sensors
+ - Add Quick Actions
+ - Background periodic tasks
 
 <div align="center">
   <a href="https://github.com/user-attachments/assets/">
